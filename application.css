@@ -1,0 +1,20 @@
+.container {
+	margin: 20px auto;
+	width: 600px;
+	font-family: "Helvetica", Helvetica, Sans-Serif;
+}
+
+.table {
+	margin: 20px auto;
+	padding: 10px;
+	border: 1px solid gray;
+}
+
+.piece {
+	width: 100px;
+	height: 100px;
+	margin: 10px;
+	border: 1px solid black;
+	border-radius: 50%;
+	background: white;
+}
