@@ -86,10 +86,10 @@ NewGame.prototype.blackWins = "B" * 4;
 
 NewGame.prototype.horizontalWin = function(){
   
-  for(i = 0; i < currentGame.length; i++){
-    if (currentGame[i].join() === this.redWins) {
+  for(i = 0; i < this.currentGame.length; i++){
+    if (this.currentGame[i].join() === this.redWins) {
       return "Red Wins"
-    } else if (currentGame[i].join() === this.blackWins) {
+    } else if (this.currentGame[i].join() === this.blackWins) {
       return "Black Wins"
     }
   }
@@ -100,11 +100,11 @@ NewGame.prototype.verticalWin = function(){
   var transpose = function(a)  { 
     return a[0].map(function (_, c) { return a.map(function (r) { return r[c]; }); });
   }
-  transpose(currentGame);
-  for(i = 0; i < currentGame.length; i++){
-    if (currentGame[i].join() === this.redWins) {
+  transpose(this.currentGame);
+  for(i = 0; i < this.currentGame.length; i++){
+    if (this.currentGame[i].join() === this.redWins) {
       return "Red Wins"
-    } else if (currentGame[i].join() === this.blackWins) {
+    } else if (this.currentGame[i].join() === this.blackWins) {
       return "Black Wins"
     }
   }  
@@ -113,4 +113,4 @@ NewGame.prototype.verticalWin = function(){
 // NewGame.prototype.diagonalWin = function(){
   
 // };
-   
+
