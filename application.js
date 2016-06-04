@@ -80,3 +80,37 @@ NewGame.prototype.playGame = function() {
   };
 
 };
+
+NewGame.prototype.redWins = "R" * 4;
+NewGame.prototype.blackWins = "B" * 4;
+
+NewGame.prototype.horizontalWin = function(){
+  
+  for(i = 0; i < this.currentGame.length; i++){
+    if (this.currentGame[i].join() === this.redWins) {
+      return "Red Wins"
+    } else if (this.currentGame[i].join() === this.blackWins) {
+      return "Black Wins"
+    }
+  }
+};
+
+NewGame.prototype.verticalWin = function(){
+
+  var transpose = function(a)  { 
+    return a[0].map(function (_, c) { return a.map(function (r) { return r[c]; }); });
+  }
+  transpose(this.currentGame);
+  for(i = 0; i < this.currentGame.length; i++){
+    if (this.currentGame[i].join() === this.redWins) {
+      return "Red Wins"
+    } else if (this.currentGame[i].join() === this.blackWins) {
+      return "Black Wins"
+    }
+  }  
+};
+
+// NewGame.prototype.diagonalWin = function(){
+  
+// };
+
